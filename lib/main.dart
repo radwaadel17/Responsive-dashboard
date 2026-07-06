@@ -1,17 +1,19 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:responsiveapp/features/dash-board/presentation/views/respoinsive_dashboard_view.dart';
 
 void main() {
   runApp(
     DevicePreview(
       enabled: !kReleaseMode,
-      builder: (context) => const ResponsiveApp(), 
+      builder: (context) => const ResponsiveDashBoard(), 
     ),
   );
 }
-class ResponsiveApp extends StatelessWidget {
-  const ResponsiveApp({super.key});
+
+class ResponsiveDashBoard extends StatelessWidget {
+  const ResponsiveDashBoard({super.key});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,7 +21,7 @@ class ResponsiveApp extends StatelessWidget {
       useInheritedMediaQuery: true,
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
-      home: const Text('hi app'),
+      home: const ResponsiveDashBoardView(),
     );
   }
 }
