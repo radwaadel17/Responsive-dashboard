@@ -19,7 +19,7 @@ class ResponsiveApp extends StatelessWidget {
       useInheritedMediaQuery: true,
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
-      home: const Text('hi'),
+      home: const Text('hi app'),
     );
   }
 }
