@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsiveapp/features/dash-board/presentation/views/widgets/responsive-dashboard-view-body.dart';
 
 class ResponsiveDashBoardView extends StatelessWidget {
   const ResponsiveDashBoardView({super.key});
@@ -6,7 +7,7 @@ class ResponsiveDashBoardView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
+      body: ResponsiveDashBoardViewBody(),
     );
   }
 }

@@ -1,11 +1,17 @@
+
 import 'package:flutter/material.dart';
 
-class AdabtiveLayout extends StatelessWidget {
-  const AdabtiveLayout({super.key, required this.mobileLayout, required this.tabletLayout, required this.desktopLayout});
-  final WidgetBuilder mobileLayout , tabletLayout , desktopLayout ; 
+class AdabtiveLayoutDash extends StatelessWidget {
+  const AdabtiveLayoutDash({
+    super.key,
+    required this.mobileLayout,
+    required this.tabletLayout,
+    required this.desktopLayout,
+  });
+  final WidgetBuilder mobileLayout, tabletLayout, desktopLayout;
   @override
   Widget build(BuildContext context) {
-   return LayoutBuilder(
+    return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
         if (constraints.maxWidth < 600) {
           return mobileLayout(context);
@@ -17,4 +23,4 @@ class AdabtiveLayout extends StatelessWidget {
       },
     );
   }
-}           
+}
