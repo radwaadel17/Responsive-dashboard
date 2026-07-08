@@ -1,8 +1,8 @@
 
 import 'package:flutter/material.dart';
 
-class AdabtiveLayoutDash extends StatelessWidget {
-  const AdabtiveLayoutDash({
+class AdabtiveLayout extends StatelessWidget {
+  const AdabtiveLayout({
     super.key,
     required this.mobileLayout,
     required this.tabletLayout,
