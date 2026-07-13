@@ -12,9 +12,12 @@ class CustomListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      leading: SvgPicture.asset(img),
-      title: Text(title , style: AppStyles.regular16White.copyWith(color: AppColors.primaryColor)),
+    return Padding(
+      padding: const EdgeInsets.only(top : 20),
+      child: ListTile(
+        leading: SvgPicture.asset(img),
+        title: Text(title , style: AppStyles.regular16White.copyWith(color: AppColors.primaryColor)),
+      ),
     );
   }
 }
