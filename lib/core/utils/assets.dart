@@ -46,6 +46,10 @@ class Assets {
   /// assets/images/profilePhoto2.svg
   static const String imagesProfilePhoto2 = "assets/images/profilePhoto2.svg";
 
+  /// Assets for imagesProfilePhoto3
+  /// assets/images/profilePhoto3.svg
+  static const String imagesProfilePhoto3 = "assets/images/profilePhoto3.svg";
+
   /// Assets for imagesSetting
   /// assets/images/setting.svg
   static const String imagesSetting = "assets/images/setting.svg";

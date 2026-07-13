@@ -13,7 +13,7 @@ class CustomDrawer extends StatelessWidget {
         children: [
           SizedBox(height: 20),
           ListTileUserInfo(
-            img: Assets.imagesProfilePhoto1,
+            img: Assets.imagesProfilePhoto3,
             name: 'Lekan Okeowo',
             email: 'demo@gmail.com',
           ),
