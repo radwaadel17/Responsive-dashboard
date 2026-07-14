@@ -1,21 +1,45 @@
 import 'package:flutter/material.dart';
-import 'package:responsiveapp/features/dash-board/presentation/models/drawer-items-model.dart' as DrawerItemModel;
+import 'package:responsiveapp/core/utils/assets.dart';
+import 'package:responsiveapp/features/dash-board/presentation/models/drawer-model.dart';
 import 'package:responsiveapp/features/dash-board/presentation/widgets/custom-list-tile.dart';
 
-class DrawerItemListView extends StatelessWidget {
-  const DrawerItemListView({
-    super.key,
-  });
+class DrawerItemListView extends StatefulWidget {
+  const DrawerItemListView({super.key});
+  @override
+  State<DrawerItemListView> createState() => _DrawerItemListViewState();
+}
 
+class _DrawerItemListViewState extends State<DrawerItemListView> {
+  int cnt = 0;
+  final List<DrawerItemModel> listItems = [
+    DrawerItemModel(icon: Assets.imagesDashboardIcon, title: 'Dashboard'),
+    DrawerItemModel(
+      icon: Assets.imagesMyTRansactionIcon,
+      title: 'My Transaction',
+    ),
+    DrawerItemModel(icon: Assets.imagesStatisticsIcon, title: 'Statistics'),
+    DrawerItemModel(icon: Assets.imagesWalletIcon, title: 'Wallet Account'),
+    DrawerItemModel(
+      icon: Assets.imagesInvestmentsIcon,
+      title: 'My Investments',
+    ),
+  ];
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
       shrinkWrap: true,
-      itemCount: DrawerItemModel.listItems.length,
+      itemCount: listItems.length,
       itemBuilder: (context, index) {
-        return CustomListTile(
-          title: DrawerItemModel.listItems[index].title,
-          img: DrawerItemModel.listItems[index].icon,
+        return CheckItemActive(
+          onTap: () {
+            if (cnt != index) {
+              return setState(() {
+                cnt = index;
+              });
+            }
+          },
+          drawerItemModel: listItems[index],
+          isActive: cnt == index,
         );
       },
     );
