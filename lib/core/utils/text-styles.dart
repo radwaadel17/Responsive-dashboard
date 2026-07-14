@@ -43,6 +43,12 @@ abstract class AppStyles {
     fontWeight: FontWeight.w600,
     color: Color(0xFFFFFFFF),
   );
+  static const TextStyle semiBold24White = TextStyle(
+    fontFamily: 'Montserrat',
+    fontSize: 24,
+    fontWeight: FontWeight.w600,
+    color: Color(0xFFFFFFFF),
+  );
   static const TextStyle medium16LightBlue = TextStyle(
     fontFamily: 'Montserrat',
     fontSize: 16,
