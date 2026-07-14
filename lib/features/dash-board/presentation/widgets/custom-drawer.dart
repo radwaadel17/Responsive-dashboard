@@ -5,35 +5,51 @@ import 'package:responsiveapp/features/dash-board/presentation/widgets/custom-li
 import 'package:responsiveapp/features/dash-board/presentation/widgets/drawer-items-list.dart';
 import 'package:responsiveapp/features/dash-board/presentation/widgets/list-tile-user-info.dart';
 
-class CustomDrawer extends StatelessWidget {
+class CustomDrawer extends StatefulWidget {
   const CustomDrawer({super.key});
+
+  @override
+  State<CustomDrawer> createState() => _CustomDrawerState();
+}
+
+class _CustomDrawerState extends State<CustomDrawer> {
+  int cnt = 0;
   @override
   Widget build(BuildContext context) {
     return Drawer(
       backgroundColor: Colors.white,
-      child: Column(
-        children: [
-          SizedBox(height: 20),
-          ListTileUserInfo(
-            img: Assets.imagesProfilePhoto3,
-            name: 'Lekan Okeowo',
-            email: 'demo@gmail.com',
+      child: CustomScrollView(
+        slivers: [
+          SliverToBoxAdapter(child: SizedBox(height: 20)),
+          SliverToBoxAdapter(
+            child: ListTileUserInfo(
+              img: Assets.imagesProfilePhoto3,
+              name: 'Lekan Okeowo',
+              email: 'demo@gmail.com',
+            ),
           ),
           DrawerItemListView(),
-          Spacer(),
-          CustomListTile(
-            drawerItemModel: DrawerItemModel(
-              icon: Assets.imagesSetting,
-              title: 'Settings',
+          SliverFillRemaining(
+            hasScrollBody: false,
+            child: Column(
+              children: [
+                Expanded(child: SizedBox()),
+                CustomListTile(
+                  drawerItemModel: DrawerItemModel(
+                    icon: Assets.imagesSetting,
+                    title: 'Settings',
+                  ),
+                ),
+                CustomListTile(
+                  drawerItemModel: DrawerItemModel(
+                    icon: Assets.imagesLogout,
+                    title: 'Logout',
+                  ),
+                ),
+                SizedBox(height: 20),
+              ],
             ),
           ),
-          CustomListTile(
-            drawerItemModel: DrawerItemModel(
-              icon: Assets.imagesLogout,
-              title: 'Logout',
-            ),
-          ),
-          SizedBox(height: 20),
         ],
       ),
     );

@@ -28,19 +28,7 @@ class CustomListTile extends StatelessWidget {
 }
 
 
-class CheckItemActive extends StatelessWidget {
-  const CheckItemActive({super.key, this.onTap, required this.drawerItemModel, required this.isActive});
-  final DrawerItemModel  drawerItemModel ; 
-  final Function()? onTap; 
-  final bool isActive ; 
 
-  @override
-  Widget build(BuildContext context) {
-    return isActive == false ? CustomListTile( drawerItemModel: drawerItemModel, onTap:onTap ,) 
-    : 
-    Container();
-  }
-}
 
 
 
