@@ -15,27 +15,41 @@ class _LatestTransactionListState extends State<LatestTransactionList> {
     UserInfoModel(
       name: 'Madrani Andi',
       email: 'Madraniadi20@gmail',
-      img: Assets.imagesProfilePhoto1,
+      img: Assets.imagesProfilePhoto3,
     ),
     UserInfoModel(
       name: 'Josua Nunito',
       email: 'Josh Nunito@gmail.com',
-      img: Assets.imagesProfilePhoto2,
+      img: Assets.imagesProfilePhoto3,
     ),
     UserInfoModel(
       name: 'Madrani Andi',
       email: 'mehmet@.com',
       img: Assets.imagesProfilePhoto3,
     ),
+    UserInfoModel(
+      name: 'Madrani Andi',
+      email: 'mehmet@.com',
+      img: Assets.imagesProfilePhoto3,
+    ),
+     UserInfoModel(
+      name: 'Madrani Andi',
+      email: 'Madraniadi20@gmail',
+      img: Assets.imagesProfilePhoto1,
+    ),
   ];
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
+      padding:  EdgeInsets.zero,
       scrollDirection: Axis.horizontal,
       child: Row(
         children: userInfos.map((e) => IntrinsicWidth(
-          child: ListTileUserInfo(
-            name: e.name, email: e.email, img: e.img,),
+          child: Padding(
+            padding: const EdgeInsets.only(right: 20 , top: 10),
+            child: ListTileUserInfo(
+              name: e.name, email: e.email, img: e.img,),
+          ),
         )).toList(),
       ),
     );

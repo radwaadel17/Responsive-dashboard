@@ -16,7 +16,11 @@ class LatestTranscationSection extends StatelessWidget {
             color: AppColors.primaryColor,
           ),
         ),
-        LatestTransactionList() 
+        LatestTransactionList()  , 
+        Divider(
+          height: 48 , 
+          color: Color(0xffF1F1F1),
+        ),
       ],
     );
   }

@@ -11,18 +11,15 @@ class ListTileUserInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(12),
-      child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(12),
-          color: Colors.grey.shade200),
-        child: ListTile(
-          leading: SvgPicture.asset(img, fit: BoxFit.contain,),
-          title: Text(
-            name, style: AppStyles.semiBold20White.copyWith(color: AppColors.primaryColor , fontSize: 16),),
-          subtitle: Text(email, style: AppStyles.regular12White.copyWith(color: AppColors.greyColor),),
-        ),
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(12),
+        color: Colors.grey.shade200),
+      child: ListTile(
+        leading: SvgPicture.asset(img, fit: BoxFit.contain,),
+        title: Text(
+          name, style: AppStyles.semiBold20White.copyWith(color: AppColors.primaryColor , fontSize: 16),),
+        subtitle: Text(email, style: AppStyles.regular12White.copyWith(color: AppColors.greyColor),),
       ),
     );
   }

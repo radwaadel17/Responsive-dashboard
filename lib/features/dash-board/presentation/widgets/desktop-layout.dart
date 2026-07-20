@@ -10,22 +10,22 @@ class DesktopLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: Row(children: [
-        Expanded(
-          flex: 1,
-          child: CustomDrawer()), 
-          SizedBox(width: 20,),
-        Expanded(
-          flex: 2,
-          child: Column(
-            children: [
-              AllExpensesWidget(),
-              SizedBox(height: 24,),
-              QuikInvoice(), 
-            ],
-          ))
-          
-      ],),
+      child: Row(
+        children: [
+          Expanded(flex: 1, child: CustomDrawer()),
+          SizedBox(width: 20),
+          Expanded(
+            flex: 2,
+            child: Column(
+              children: [
+                AllExpensesWidget(),
+                SizedBox(height: 24),
+                QuikInvoice(),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

@@ -22,10 +22,13 @@ class _CustomDrawerState extends State<CustomDrawer> {
         slivers: [
           SliverToBoxAdapter(child: SizedBox(height: 20)),
           SliverToBoxAdapter(
-            child: ListTileUserInfo(
-              img: Assets.imagesProfilePhoto3,
-              name: 'Lekan Okeowo',
-              email: 'demo@gmail.com',
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ListTileUserInfo(
+                img: Assets.imagesProfilePhoto3,
+                name: 'Lekan Okeowo',
+                email: 'demo@gmail.com',
+              ),
             ),
           ),
           DrawerItemListView(),
