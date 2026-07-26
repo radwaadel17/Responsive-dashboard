@@ -22,6 +22,10 @@ class Assets {
   /// assets/images/dashboard-icon.svg
   static const String imagesDashboardIcon = "assets/images/dashboard-icon.svg";
 
+  /// Assets for imagesGallery
+  /// assets/images/gallery.svg
+  static const String imagesGallery = "assets/images/gallery.svg";
+
   /// Assets for imagesInvestmentsIcon
   /// assets/images/investments-icon.svg
   static const String imagesInvestmentsIcon = "assets/images/investments-icon.svg";
@@ -65,5 +69,9 @@ class Assets {
   /// Assets for imagesWave
   /// assets/images/Wave.svg
   static const String imagesWave = "assets/images/Wave.svg";
+
+  /// Assets for imagesWaves
+  /// assets/images/waves.png
+  static const String imagesWaves = "assets/images/waves.png";
 }
 
