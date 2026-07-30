@@ -49,7 +49,7 @@ class _MyCardPageViewState extends State<MyCardPageView> {
           itemBuilder: (context, index) => MyCard(cardModel: cards[index]),
         ),
         Padding(
-          padding: const EdgeInsets.all(9.0),
+          padding: const EdgeInsets.only(top : 4  , right: 4 , left: 4),
           child: Row(
             children: cards.asMap().entries.map((entry) {
               return entry.key == currentIndex
