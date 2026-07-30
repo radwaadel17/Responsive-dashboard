@@ -4,8 +4,8 @@ import 'package:responsiveapp/features/dash-board/presentation/widgets/my-card-h
 import 'package:responsiveapp/features/dash-board/presentation/widgets/my-card-page-view.dart';
 import 'package:responsiveapp/features/dash-board/presentation/widgets/trasaction-section.dart';
 
-class MyCardSection extends StatelessWidget {
-  const MyCardSection({super.key});
+class MyCardAndTransactionSection extends StatelessWidget {
+  const MyCardAndTransactionSection({super.key});
 
   @override
   Widget build(BuildContext context) {
