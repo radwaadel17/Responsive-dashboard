@@ -6,16 +6,19 @@ class ActiveDot extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedContainer(
-      curve: Curves.fastOutSlowIn,
-
-      height: 8,
-      width: 32,
-      decoration: BoxDecoration(
-        color: AppColors.buleColor,
-        borderRadius: BorderRadius.circular(12),
+    return Padding(
+      padding: const EdgeInsets.only(left: 6),
+      child: AnimatedContainer(
+        curve: Curves.fastOutSlowIn,
+      
+        height: 8,
+        width: 32,
+        decoration: BoxDecoration(
+          color: AppColors.buleColor,
+          borderRadius: BorderRadius.circular(12),
+        ),
+        duration: Duration(milliseconds: 350),
       ),
-      duration: Duration(milliseconds: 350),
     );
   }
 }
@@ -26,7 +29,7 @@ class NonActiveDot extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 4, right: 4),
+      padding: const EdgeInsets.only(left: 6, right: 6),
       child: AnimatedContainer(
         curve: Curves.fastOutSlowIn,
 

@@ -9,19 +9,23 @@ class MyCardSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomContainer(
-      child: CustomScrollView(
-        slivers: const [
-          SliverToBoxAdapter(child: MycardHeader()),
-          SliverToBoxAdapter(child: SizedBox(height: 12)),
-          SliverToBoxAdapter(child: MyCardPageView()),
-          SliverToBoxAdapter(child: SizedBox(height: 12)),
-          SliverToBoxAdapter(
-            child: Divider(height: 24, color: Color(0xffF1F1F1)),
+    return CustomScrollView(
+      slivers: [
+        SliverToBoxAdapter(
+          child: CustomContainer(
+            child: Column(
+              children: [
+                MycardHeader(),
+                SizedBox(height: 12),
+                MyCardPageView(),
+                SizedBox(height: 12),
+                Divider(height: 24, color: Color(0xffF1F1F1)),
+                TransactionSection(),
+              ],
+            ),
           ),
-          SliverToBoxAdapter(child: TransactionSection()),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
