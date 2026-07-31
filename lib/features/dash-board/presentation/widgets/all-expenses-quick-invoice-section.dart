@@ -14,6 +14,7 @@ class AllExpensesAndQuickInvoiceSection extends StatelessWidget {
         SliverToBoxAdapter(child: AllExpensesWidget()),
         SliverToBoxAdapter(child: SizedBox(height: 24)),
         SliverToBoxAdapter(child: QuikInvoice()),
+        
       ],
     );
   }

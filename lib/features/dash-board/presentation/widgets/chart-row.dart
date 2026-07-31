@@ -15,7 +15,7 @@ class ChartRow extends StatelessWidget {
         Expanded(
           flex: 2,
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               PercentageWidget(
                 color: Color(0xffE2DECD),
