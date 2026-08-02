@@ -15,21 +15,19 @@ class PercentageWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: ListTile(
-        leading: Container(
-          height: 12,
-          width: 12,
-          decoration: BoxDecoration(color: color, shape: BoxShape.circle),
-        ),
-        title: Text(
-          title,
-          style: AppStyles.regular16White.copyWith(color: AppColors.primaryColor),
-        ),
-        trailing: Text(
-          percentage,
-          style: AppStyles.medium16White.copyWith(color: AppColors.buleColor),
-        ),
+    return ListTile(
+      leading: Container(
+        height: 12,
+        width: 12,
+        decoration: BoxDecoration(color: color, shape: BoxShape.circle),
+      ),
+      title: Text(
+        title,
+        style: AppStyles.regular16White.copyWith(color: AppColors.primaryColor),
+      ),
+      trailing: Text(
+        percentage,
+        style: AppStyles.medium16White.copyWith(color: AppColors.buleColor),
       ),
     );
   }

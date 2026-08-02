@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:responsiveapp/core/widgets/custom-container.dart';
-import 'package:responsiveapp/features/dash-board/presentation/widgets/chart-row.dart';
 import 'package:responsiveapp/features/dash-board/presentation/widgets/my-card-header.dart';
 import 'package:responsiveapp/features/dash-board/presentation/widgets/my-card-page-view.dart';
 import 'package:responsiveapp/features/dash-board/presentation/widgets/trasaction-section.dart';
@@ -10,9 +9,9 @@ class MyCardAndTransactionSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomScrollView(
-      slivers: [
-        SliverToBoxAdapter(
+    return Column(
+      children: [
+        Expanded(
           child: CustomContainer(
             child: Column(
               children: [
@@ -26,11 +25,8 @@ class MyCardAndTransactionSection extends StatelessWidget {
             ),
           ),
         ),
-        SliverToBoxAdapter(child: SizedBox(height: 24)),
-        SliverFillRemaining(
-          hasScrollBody: false,
-          child: CustomContainer(child: ChartRow()),
-        ),
+        SizedBox(height: 24),
+       
       ],
     );
   }
