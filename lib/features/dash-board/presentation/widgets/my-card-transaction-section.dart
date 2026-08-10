@@ -11,22 +11,18 @@ class MyCardAndTransactionSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Expanded(
-          child: CustomContainer(
-            child: Column(
-              children: [
-                MycardHeader(),
-                SizedBox(height: 12),
-                MyCardPageView(),
-                SizedBox(height: 12),
-                Divider(height: 24, color: Color(0xffF1F1F1)),
-                TransactionSection(),
-              ],
-            ),
+        CustomContainer(
+          child: Column(
+            children: [
+              MycardHeader(),
+              SizedBox(height: 12),
+              MyCardPageView(),
+              SizedBox(height: 12),
+              Divider(height: 24, color: Color(0xffF1F1F1)),
+              TransactionSection(),
+            ],
           ),
-        ),
-        SizedBox(height: 24),
-       
+        ),       
       ],
     );
   }
