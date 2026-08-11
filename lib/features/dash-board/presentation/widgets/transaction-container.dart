@@ -20,20 +20,20 @@ class TransactionContainer extends StatelessWidget {
           child: ListTile(
             title: Text(
               transactionModel.titile,
-              style: AppStyles.semiBold16White.copyWith(
+              style: AppStyles.semiBold16White(context).copyWith(
                 color: AppColors.primaryColor,
               ),
             ),
                 
             subtitle: Text(
               transactionModel.subtitle,
-              style: AppStyles.regular16White.copyWith(
+              style: AppStyles.regular16White(context).copyWith(
                 color: AppColors.greyColor,
               ),
             ),
             trailing: Text(
               transactionModel.price,
-              style: AppStyles.semiBold20White.copyWith(
+              style: AppStyles.semiBold20White(context).copyWith(
                 color: transactionModel.isDeposite
                     ? AppColors.redColor
                     : AppColors.greenColor,

@@ -11,7 +11,7 @@ class IncomeHeader extends StatelessWidget {
       children: [
         Text(
           "Income",
-          style: AppStyles.semiBold20White.copyWith(
+          style: AppStyles.semiBold20White  (context).copyWith(
             color: AppColors.primaryColor,
           ),
         ),
@@ -27,7 +27,7 @@ class IncomeHeader extends StatelessWidget {
               children: [
                 Text(
                   'Monthly',
-                  style: AppStyles.medium16LightBlue.copyWith(
+                  style: AppStyles.medium16LightBlue(context).copyWith(
                     color: AppColors.primaryColor,
                   ),
                 ),

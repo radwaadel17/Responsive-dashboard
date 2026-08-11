@@ -41,7 +41,7 @@ class _TransactionSectionState extends State<TransactionSection> {
         SizedBox(height: 12),
         Text(
           '13 April 2022',
-          style: AppStyles.regular16White.copyWith(color: AppColors.greyColor),
+          style: AppStyles.regular16White(context).copyWith(color: AppColors.greyColor),
         ),
         SizedBox(height: 12),
 

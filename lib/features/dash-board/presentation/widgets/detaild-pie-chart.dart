@@ -12,39 +12,47 @@ class DetailedPieChart extends StatefulWidget {
 }
 
 class _DetailedPieChartState extends State<DetailedPieChart> {
-  List<PieChartModel> pieChartData = [
-    PieChartModel(
-      title: 'Design service',
-      percentage: '40%',
-      color: AppColors.darkBlue,
-      textStyle: AppStyles.regular16White.copyWith(color: AppColors.primaryColor),
-      titlePositionPercentageOffset : 1.5
-    ),
-    PieChartModel(
-      title: 'Design product',
-      percentage: '25%',
-      color: AppColors.buleColor,
-      textStyle: AppStyles.regular16White.copyWith(color: AppColors.primaryColor),
-      titlePositionPercentageOffset : 1.5
-    ),
-    PieChartModel(
-      title: 'Product royalty',
-      percentage: '20%',
-      color: AppColors.primaryColor,
-      textStyle: AppStyles.regular16White.copyWith(color: AppColors.primaryColor),
-      titlePositionPercentageOffset : 1.3
-    ),
-    PieChartModel(
-      title: 'Other',
-      percentage: '15%',
-      color: Color(0xffE2DECD),
-      textStyle: AppStyles.regular16White.copyWith(color: AppColors.primaryColor),
-      titlePositionPercentageOffset : 1.5
-    ),
-  ];
   int touchedIndex = -1;
   @override
   Widget build(BuildContext context) {
+    List<PieChartModel> pieChartData = [
+      PieChartModel(
+        title: 'Design service',
+        percentage: '40%',
+        color: AppColors.darkBlue,
+        textStyle: AppStyles.regular16White(
+          context,
+        ).copyWith(color: AppColors.primaryColor),
+        titlePositionPercentageOffset: 1.5,
+      ),
+      PieChartModel(
+        title: 'Design product',
+        percentage: '25%',
+        color: AppColors.buleColor,
+        textStyle: AppStyles.regular16White(
+          context,
+        ).copyWith(color: AppColors.primaryColor),
+        titlePositionPercentageOffset: 1.5,
+      ),
+      PieChartModel(
+        title: 'Product royalty',
+        percentage: '20%',
+        color: AppColors.primaryColor,
+        textStyle: AppStyles.regular16White(
+          context,
+        ).copyWith(color: AppColors.primaryColor),
+        titlePositionPercentageOffset: 1.3,
+      ),
+      PieChartModel(
+        title: 'Other',
+        percentage: '15%',
+        color: Color(0xffE2DECD),
+        textStyle: AppStyles.regular16White(
+          context,
+        ).copyWith(color: AppColors.primaryColor),
+        titlePositionPercentageOffset: 1.5,
+      ),
+    ];
     return PieChart(
       PieChartData(
         pieTouchData: PieTouchData(
@@ -63,15 +71,20 @@ class _DetailedPieChartState extends State<DetailedPieChart> {
         sectionsSpace: 0,
         sections: List.generate(pieChartData.length, (index) {
           return PieChartSectionData(
-            titlePositionPercentageOffset: touchedIndex == index ? pieChartData[index].titlePositionPercentageOffset : null,
+            titlePositionPercentageOffset: touchedIndex == index
+                ? pieChartData[index].titlePositionPercentageOffset
+                : null,
             color: pieChartData[index].color,
             value: double.parse(
               pieChartData[index].percentage.replaceAll('%', ''),
             ),
-            title:  touchedIndex == index ? pieChartData[index].title :  pieChartData[index].percentage,
-            titleStyle:touchedIndex == index ?  pieChartData[index].textStyle : AppStyles.regular16White,
+            title: touchedIndex == index
+                ? pieChartData[index].title
+                : pieChartData[index].percentage,
+            titleStyle: touchedIndex == index
+                ? pieChartData[index].textStyle
+                : AppStyles.regular16White(context),
             radius: touchedIndex == index ? 60 : 50,
-
           );
         }),
       ),

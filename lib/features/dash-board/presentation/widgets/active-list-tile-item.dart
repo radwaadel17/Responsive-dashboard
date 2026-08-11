@@ -16,7 +16,7 @@ class ActiveListTileItem extends StatelessWidget {
         leading: SvgPicture.asset(drawerItemModel.icon, fit: BoxFit.contain),
         title: Text(
           drawerItemModel.title,
-          style: AppStyles.semiBold16White.copyWith(
+          style: AppStyles.semiBold16White (context).copyWith(
             color: AppColors.buleColor,
           ),
         ),

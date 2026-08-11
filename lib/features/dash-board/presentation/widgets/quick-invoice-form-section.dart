@@ -18,9 +18,9 @@ class QuickInvoceFormSection extends StatelessWidget {
       children: [
         Text(
           txtHeader,
-          style: AppStyles.medium16White.copyWith(
+          style: AppStyles.medium16White(context).copyWith(
             color: AppColors.primaryColor,
-          ),
+          ),  
         ),
         SizedBox(height: 12),
         Padding(
@@ -28,7 +28,7 @@ class QuickInvoceFormSection extends StatelessWidget {
           child: TextField(
             decoration: InputDecoration(
               hintText: hintText,
-              hintStyle: AppStyles.regular16White.copyWith(color: AppColors.greyColor),
+              hintStyle: AppStyles.regular16White(context)  .copyWith(color: AppColors.greyColor),
               fillColor: AppColors.whiteColor,
               filled: true,
               border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),

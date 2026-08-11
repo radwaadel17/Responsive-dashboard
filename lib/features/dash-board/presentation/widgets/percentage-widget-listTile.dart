@@ -23,11 +23,11 @@ class PercentageWidget extends StatelessWidget {
       ),
       title: Text(
         title,
-        style: AppStyles.regular16White.copyWith(color: AppColors.primaryColor),
+        style: AppStyles.regular16White(context).copyWith(color: AppColors.primaryColor),
       ),
       trailing: Text(
         percentage,
-        style: AppStyles.medium16White.copyWith(color: AppColors.buleColor),
+        style: AppStyles.medium16White(context).copyWith(color: AppColors.buleColor),
       ),
     );
   }

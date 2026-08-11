@@ -18,8 +18,8 @@ class ListTileUserInfo extends StatelessWidget {
       child: ListTile(
         leading: SvgPicture.asset(img, fit: BoxFit.contain,),
         title: Text(
-          name, style: AppStyles.semiBold20White.copyWith(color: AppColors.primaryColor , fontSize: 16),),
-        subtitle: Text(email, style: AppStyles.regular12White.copyWith(color: AppColors.greyColor),),
+          name, style: AppStyles.semiBold20White(context).copyWith(color: AppColors.primaryColor , fontSize: 16),),
+        subtitle: Text(email, style: AppStyles.regular12White(context).copyWith(color: AppColors.greyColor),),
       ),
     );
   }

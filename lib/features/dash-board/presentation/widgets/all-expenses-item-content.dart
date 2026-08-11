@@ -21,7 +21,7 @@ class AllExpensesItemContent extends StatelessWidget {
 
           child: Text(
             allExpensesItemModel.title,
-            style: AppStyles.semiBold16White.copyWith(
+            style: AppStyles.semiBold16White(context).copyWith(
               color: isActive ? AppColors.whiteColor : AppColors.primaryColor,
             ),
           ),
@@ -30,14 +30,14 @@ class AllExpensesItemContent extends StatelessWidget {
         FittedBox(
           child: Text(
             allExpensesItemModel.date,
-            style: AppStyles.regular14White.copyWith(color:isActive ? AppColors.whiteColor : AppColors.greyColor),
+            style: AppStyles.regular14White(context).copyWith(color:isActive ? AppColors.whiteColor : AppColors.greyColor),
           ),
         ),
         SizedBox(height: 5),
         FittedBox(
           child: Text(
             allExpensesItemModel.amount,
-            style: AppStyles.semiBold24White.copyWith(color: isActive ? AppColors.whiteColor : AppColors.buleColor),
+            style: AppStyles.semiBold24White(context).copyWith(color: isActive ? AppColors.whiteColor : AppColors.buleColor),
           ),
         ),
       ],

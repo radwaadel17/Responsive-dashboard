@@ -29,8 +29,8 @@ class MyCard extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(9.0),
                 child: ListTile(
-                  title: Text(cardModel.title, style: AppStyles.regular16White),
-                  subtitle: Text(cardModel.subtitle, style: AppStyles.medium20White),
+                  title: Text(cardModel.title, style: AppStyles.regular16White(context)),
+                  subtitle: Text(cardModel.subtitle, style: AppStyles.medium20White(context)),
                   trailing: SvgPicture.asset(Assets.imagesGallery),
                 ),
               ),
@@ -43,12 +43,12 @@ class MyCard extends StatelessWidget {
                     FittedBox(
                       child: Text(
                         cardModel.cardNum,
-                        style: AppStyles.semiBold24White,
+                        style: AppStyles.semiBold24White(context),
                       ),
                     ),
                     SizedBox(height: 5),
                     FittedBox(
-                      child: Text(cardModel.validDate, style: AppStyles.regular16White),
+                      child: Text(cardModel.validDate, style: AppStyles.regular16White(context)),
                     ),
                   ],
                 ),

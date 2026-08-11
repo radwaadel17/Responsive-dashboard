@@ -11,7 +11,7 @@ class MycardHeader extends StatelessWidget {
       children: [
         Text(
           'My card',
-          style: AppStyles.semiBold20White.copyWith(
+          style: AppStyles.semiBold20White(context).copyWith(
             color: AppColors.primaryColor,
           ),
         ),

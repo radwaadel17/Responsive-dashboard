@@ -15,7 +15,7 @@ class LatestTranscationSection extends StatelessWidget {
       children: [
         Text(
           'Latest Transaction',
-          style: AppStyles.medium16White.copyWith(
+          style: AppStyles.medium16White  (context).copyWith(
             color: AppColors.primaryColor,
           ),
         ),

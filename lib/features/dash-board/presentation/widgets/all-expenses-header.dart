@@ -11,7 +11,7 @@ class AllExpensesHeader extends StatelessWidget {
       children: [
         Text(
           "All Expenses",
-          style: AppStyles.semiBold20White.copyWith(
+          style: AppStyles.semiBold20White(context).copyWith(
             color: AppColors.primaryColor,
           ),
         ),
@@ -27,7 +27,7 @@ class AllExpensesHeader extends StatelessWidget {
               children: [
                 Text(
                   'Monthly',
-                  style: AppStyles.medium16LightBlue.copyWith(
+                  style: AppStyles.medium16LightBlue(context).copyWith(
                     color: AppColors.primaryColor,
                   ),
                 ),
