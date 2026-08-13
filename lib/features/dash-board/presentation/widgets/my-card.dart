@@ -34,23 +34,25 @@ class MyCard extends StatelessWidget {
                   trailing: SvgPicture.asset(Assets.imagesGallery),
                 ),
               ),
-              Spacer(),
-              Padding(
-                padding: const EdgeInsets.only(right: 20, bottom: 15),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
-                    FittedBox(
-                      child: Text(
-                        cardModel.cardNum,
-                        style: AppStyles.semiBold24White(context),
+             
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.only(right: 20,),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      FittedBox(
+                        child: Text(
+                          cardModel.cardNum,
+                          style: AppStyles.semiBold24White(context),
+                        ),
                       ),
-                    ),
-                    SizedBox(height: 5),
-                    FittedBox(
-                      child: Text(cardModel.validDate, style: AppStyles.regular16White(context)),
-                    ),
-                  ],
+                      
+                      FittedBox(child: Text(cardModel.validDate, style: AppStyles.regular16White(context))),
+                      Flexible(child: SizedBox(height: 8,)),
+                    ],
+                  ),
                 ),
               ),
             ],

@@ -117,7 +117,7 @@ abstract class AppStyles {
     } else if (width < SizeConfig.desktop) {
       return width / 1000;
     } else {
-      return width / 1920;
+      return width / 1536;
     }
   }
 }
