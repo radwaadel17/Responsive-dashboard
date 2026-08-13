@@ -14,10 +14,14 @@ class ActiveListTileItem extends StatelessWidget {
       child: ListTile(
         trailing: Container(width: 4, height: 24, color: AppColors.buleColor),
         leading: SvgPicture.asset(drawerItemModel.icon, fit: BoxFit.contain),
-        title: Text(
-          drawerItemModel.title,
-          style: AppStyles.semiBold16White (context).copyWith(
-            color: AppColors.buleColor,
+        title: FittedBox(
+          fit: BoxFit.scaleDown,
+          alignment: Alignment.centerLeft,
+          child: Text(
+            drawerItemModel.title,
+            style: AppStyles.semiBold16White (context).copyWith(
+              color: AppColors.buleColor,
+            ),
           ),
         ),
       ),

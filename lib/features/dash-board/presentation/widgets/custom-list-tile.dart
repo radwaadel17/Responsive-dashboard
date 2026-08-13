@@ -20,7 +20,10 @@ class CustomListTile extends StatelessWidget {
         padding: const EdgeInsets.only(top : 20),
         child: ListTile(
           leading: SvgPicture.asset(drawerItemModel.icon, fit: BoxFit.contain,),
-          title: Text(drawerItemModel.title , style: AppStyles.regular16White (context).copyWith(color: AppColors.primaryColor)),
+          title: FittedBox(
+            alignment: Alignment.centerLeft,
+            fit: BoxFit.scaleDown,
+            child: Text(drawerItemModel.title , style: AppStyles.regular16White (context).copyWith(color: AppColors.primaryColor))),
         ),
       ),
     );
