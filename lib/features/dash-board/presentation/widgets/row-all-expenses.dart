@@ -12,22 +12,33 @@ class RowAllExpenses extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Container(
-          height: 60,
-          width: 60,
-          decoration: BoxDecoration(
-            // ignore: deprecated_member_use
-            color: isBlue == false
-                ? AppColors.whiteColor
-                : AppColors.whiteColor.withOpacity(0.1),
-            shape: BoxShape.circle,
-          ),
-          child: Center(
-            child: FittedBox(
-              child: SvgPicture.asset(
-                image,
-                fit: BoxFit.contain,
-                color: isBlue ? AppColors.whiteColor : AppColors.buleColor,
+        Flexible(
+          fit: FlexFit.loose,
+          child: ConstrainedBox(
+            constraints: BoxConstraints(
+              maxWidth: 60,
+              maxHeight: 60,
+            ),
+            child: AspectRatio(
+              aspectRatio: 1,
+              child: Container(
+            
+                decoration: BoxDecoration(
+                  // ignore: deprecated_member_use
+                  color: isBlue == false
+                      ? AppColors.whiteColor
+                      : AppColors.whiteColor.withOpacity(0.1),
+                  shape: BoxShape.circle,
+                ),
+                child: Center(
+                  child: FittedBox(
+                    child: SvgPicture.asset(
+                      image,
+                      fit: BoxFit.contain,
+                      color: isBlue ? AppColors.whiteColor : AppColors.buleColor,
+                    ),
+                  ),
+                ),
               ),
             ),
           ),

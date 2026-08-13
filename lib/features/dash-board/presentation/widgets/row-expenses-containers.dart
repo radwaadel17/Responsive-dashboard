@@ -35,38 +35,43 @@ class _RowExpensesContainersState extends State<RowExpensesContainers> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: items.asMap().entries.map((entry) {
-        int index = entry.key;
-        var item = entry.value;
-        if (index == 1) {
-          return Expanded(
-            child: Padding(
-              padding: const EdgeInsets.only(left: 12, right: 12),
-              child: AllExpensesItem(
-                onTap: () {
-                  setState(() {
-                    selectedIndex = index;
-                  });
-                },
-                allExpensesItemModel: item,
-                isActive: selectedIndex == index,
-              ),
-            ),
-          );
-        } else {
-          return Expanded(
+     children: [
+        Expanded(
+          child: AllExpensesItem(
+            allExpensesItemModel: items[0],
+            isActive: selectedIndex == 0,
+            onTap: () {
+              setState(() {
+                selectedIndex = 0;
+              });
+            },
+          ),
+        ),
+         SizedBox(width: 6),
+          Expanded(
             child: AllExpensesItem(
-              onTap: () {
-                setState(() {
-                  selectedIndex = index;
-                });
-              },
-              allExpensesItemModel: item,
-              isActive: selectedIndex == index,
-            ),
-          );
-        }
-      }).toList(),
+            allExpensesItemModel: items[1],
+            isActive: selectedIndex == 1,
+            onTap: () {
+              setState(() {
+                selectedIndex = 1;
+              });
+            },
+                    ),
+          ),
+          SizedBox(width: 6),
+          Expanded(
+            child: AllExpensesItem(
+            allExpensesItemModel: items[2],
+            isActive: selectedIndex == 2  ,
+            onTap: () {
+              setState(() {
+                selectedIndex = 2;
+              });
+            },
+                    ),
+          ),
+     ]
     );
   }
 }
