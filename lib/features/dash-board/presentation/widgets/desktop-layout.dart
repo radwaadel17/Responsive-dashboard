@@ -42,7 +42,7 @@ class ScrollingDesktopUI extends StatelessWidget {
                   children: [
                     MyCardAndTransactionSection(),
                     SizedBox(height: 24),
-                    CustomContainer(child:DefineWidget()),
+                    Expanded(child: CustomContainer(child:DefineWidget())),
                   ],
                 ),
               ),

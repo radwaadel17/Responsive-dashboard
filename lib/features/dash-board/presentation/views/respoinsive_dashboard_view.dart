@@ -15,7 +15,6 @@ class _ResponsiveDashBoardViewState extends State<ResponsiveDashBoardView> {
   @override
   Widget build(BuildContext context) {
     bool  isMobile = MediaQuery.of(context).size.width < 800 ;
-    print("isMobile : ${MediaQuery.of(context).size.width}");
     return Scaffold(
       key: scaffoldKey,
       appBar: isMobile ? AppBar(

@@ -10,6 +10,7 @@ class DefineWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     SizeConfig.init(context);
     var size = SizeConfig.screenWidth; 
+    print("size : $size");
     bool isErrorSize = size > SizeConfig.desktop && size <= SizeConfig.desktopError;
     return isErrorSize  ? AspectRatio(
       aspectRatio: 1,
